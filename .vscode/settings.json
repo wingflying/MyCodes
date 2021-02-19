@@ -3,7 +3,7 @@
 
     },
     "files.autoSave": "afterDelay",
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "window.zoomLevel": 0,
     "python.linting.pylintArgs": ["----extension-pkg-whitelist=1xml"],
     "code-runner.executorMap":{
