@@ -1,0 +1,13 @@
+{
+    "[python]": {
+
+    },
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 16,
+    "window.zoomLevel": 0,
+    "python.linting.pylintArgs": ["----extension-pkg-whitelist=1xml"],
+    "code-runner.executorMap":{
+        "python": "set PYTHONIOENCODING = utf8 && python -u",
+    },
+    "explorer.confirmDragAndDrop": false
+}
