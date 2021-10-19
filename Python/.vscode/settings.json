@@ -1,5 +1,7 @@
 //CPROC工作区的配置文件
 {
+  "python.pythonPath": "C:\\ProgramData\\Anaconda3\\Python.exe",
+  "git.path": "C:\\Program Files\\Git\\bin\\Git.exe",
   "window.zoomLevel": 0,
   "search.followSymlinks": false,
   "editor.formatOnSave": true,
@@ -28,7 +30,7 @@
     "**/dist": true
   },
   "git.confirmSync": false,
-  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  //"javascript.implicitProjectConfig.experimentalDecorators": true,
   "editor.renderWhitespace": "boundary",
   "editor.cursorBlinking": "smooth",
   "editor.minimap.enabled": true,
@@ -48,9 +50,8 @@
   "code-runner.executorMap": {
     "python": "set PYTHONIOENCODING = utf8 && python -u",
   },
-  "explorer.confirmDragAndDrop": false
-
-  "workbench.colorTheme": "One Dark Pro", //主题
+  "explorer.confirmDragAndDrop": false,
+  "workbench.colorTheme": "GitHub Light Default", //主题
   "workbench.iconTheme": "vscode-icons",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
