@@ -2,9 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "..\\..\\..\\OneDrive\\学习目录\\40 编程语言\\20 Python编程\\Python-100-Days-master"
 		}
 	],
 	"settings": {
@@ -24,5 +21,17 @@
 		"workbench.colorTheme": "GitHub Light Default",
 		"workbench.iconTheme": "vscode-icons",
 		"vsicons.dontShowNewVersionMessage": true
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Python: 当前文件",
+				"type": "python",
+				"request": "launch",
+				"program": "${file}",
+				"console": "integratedTerminal"
+			}
+		]
 	}
 }

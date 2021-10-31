@@ -47,6 +47,7 @@
   "python.linting.pylintArgs": [
     "----extension-pkg-whitelist=1xml"
   ],
+  "python.formatting.provider": "yapf",
   "code-runner.executorMap": {
     "python": "set PYTHONIOENCODING = utf8 && python -u",
   },
