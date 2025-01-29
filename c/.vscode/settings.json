@@ -4,8 +4,8 @@
   "search.followSymlinks": false,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true,
-    "source.fixAll.eslint": true
+    "source.fixAll.tslint": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "emmet.syntaxProfiles": {
     "javascript": "jsx",
@@ -47,5 +47,5 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "vsicons.dontShowNewVersionMessage": true,
-  "editor.renderIndentGuides": false //图标
+  "editor.guides.indentation": false //图标
 }
