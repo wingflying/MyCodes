@@ -1,0 +1,2 @@
+/mnt/e/GitCodes/MyCodes/c/basicEX/out/build/mytest/CMakeFiles/rebuild_cache.dir
+/mnt/e/GitCodes/MyCodes/c/basicEX/out/build/mytest/CMakeFiles/edit_cache.dir

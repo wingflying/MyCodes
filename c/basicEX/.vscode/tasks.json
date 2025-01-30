@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cmake",
+			"label": "CMake: 配置",
+			"command": "/usr/bin/g++",
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options":{
+				"cwd":"${fileDirname}"
+			},
+			"preset": "${command:cmake.activeConfigurePresetName}",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "CMake 模板 配置 任务",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

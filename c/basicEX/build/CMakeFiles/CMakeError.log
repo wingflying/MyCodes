@@ -1,0 +1,630 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c94ff/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c94ff.dir/build.make CMakeFiles/cmTC_c94ff.dir/build
+make[1]: Entering directory '/mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c94ff.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_c94ff.dir/testCCompiler.c.o   -c /mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_c94ff
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c94ff.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_c94ff.dir/testCCompiler.c.o  -o cmTC_c94ff 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c94ff.dir/build.make:97: recipe for target 'cmTC_c94ff' failed
+make[1]: *** [cmTC_c94ff] Error 1
+make[1]: Leaving directory '/mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c94ff/fast' failed
+make: *** [cmTC_c94ff/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8849b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8849b.dir/build.make CMakeFiles/cmTC_8849b.dir/build
+make[1]: Entering directory '/mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8849b.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_8849b.dir/testCCompiler.c.o   -c /mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_8849b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8849b.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8849b.dir/testCCompiler.c.o  -o cmTC_8849b 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8849b.dir/build.make:97: recipe for target 'cmTC_8849b' failed
+make[1]: *** [cmTC_8849b] Error 1
+make[1]: Leaving directory '/mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8849b/fast' failed
+make: *** [cmTC_8849b/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d6cc4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d6cc4.dir/build.make CMakeFiles/cmTC_d6cc4.dir/build
+make[1]: Entering directory '/mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d6cc4.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d6cc4.dir/testCCompiler.c.o   -c /mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_d6cc4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6cc4.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d6cc4.dir/testCCompiler.c.o  -o cmTC_d6cc4 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d6cc4.dir/build.make:97: recipe for target 'cmTC_d6cc4' failed
+make[1]: *** [cmTC_d6cc4] Error 1
+make[1]: Leaving directory '/mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d6cc4/fast' failed
+make: *** [cmTC_d6cc4/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2080c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2080c.dir/build.make CMakeFiles/cmTC_2080c.dir/build
+make[1]: Entering directory '/mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2080c.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_2080c.dir/testCCompiler.c.o   -c /mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_2080c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2080c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_2080c.dir/testCCompiler.c.o  -o cmTC_2080c 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_2080c.dir/build.make:97: recipe for target 'cmTC_2080c' failed
+make[1]: *** [cmTC_2080c] Error 1
+make[1]: Leaving directory '/mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_2080c/fast' failed
+make: *** [cmTC_2080c/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_36189/fast"
+/usr/bin/make -f CMakeFiles/cmTC_36189.dir/build.make CMakeFiles/cmTC_36189.dir/build
+make[1]: Entering directory '/mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_36189.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_36189.dir/testCCompiler.c.o   -c /mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_36189
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36189.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_36189.dir/testCCompiler.c.o  -o cmTC_36189 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_36189.dir/build.make:97: recipe for target 'cmTC_36189' failed
+make[1]: *** [cmTC_36189] Error 1
+make[1]: Leaving directory '/mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_36189/fast' failed
+make: *** [cmTC_36189/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8e0d4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8e0d4.dir/build.make CMakeFiles/cmTC_8e0d4.dir/build
+make[1]: Entering directory '/mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8e0d4.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_8e0d4.dir/testCCompiler.c.o   -c /mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_8e0d4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e0d4.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8e0d4.dir/testCCompiler.c.o  -o cmTC_8e0d4 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8e0d4.dir/build.make:97: recipe for target 'cmTC_8e0d4' failed
+make[1]: *** [cmTC_8e0d4] Error 1
+make[1]: Leaving directory '/mnt/e/GitCodes/MyCodes/c/basicEX/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8e0d4/fast' failed
+make: *** [cmTC_8e0d4/fast] Error 2
+
+
