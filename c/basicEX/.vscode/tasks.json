@@ -2,27 +2,42 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "cmake",
-			"label": "CMake: 配置",
-			"command": "/usr/bin/g++",
+			"type": "shell",
+			"label": "build",
+			"command": "cmake",
 			"args": [
-				"-g",
-				"${file}",
-				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"--build",
+				"${workspaceFolder}/build",
+				"--config",
+				"Debug"
 			],
-			"options":{
-				"cwd":"${fileDirname}"
-			},
-			"preset": "${command:cmake.activeConfigurePresetName}",
-			"problemMatcher": [
-				"$gcc"
-			],
-			"detail": "CMake 模板 配置 任务",
 			"group": {
 				"kind": "build",
 				"isDefault": true
-			}
-		}
+			},
+			"problemMatcher": [],
+			"detail": "Build project using CMake"
+		},
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ build active file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/src/build/${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build executable to src/build directory",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
 	]
 }
