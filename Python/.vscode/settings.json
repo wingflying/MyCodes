@@ -1,13 +1,12 @@
-//CPROC工作区的配置文件
+// CPROC工作区的配置文件
 {
-  "python.pythonPath": "C:\\ProgramData\\Anaconda3\\Python.exe",
+  "python.defaultInterpreterPath": "d:\\Programs\\Anaconda3\\python.exe",
   "git.path": "C:\\Program Files\\Git\\bin\\Git.exe",
   "window.zoomLevel": 0,
   "search.followSymlinks": false,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true,
-    "source.fixAll.eslint": true
+    "source.fixAll": "explicit"
   },
   "emmet.syntaxProfiles": {
     "javascript": "jsx",
@@ -27,35 +26,43 @@
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
-    "**/dist": true
+    "**/dist": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true
   },
   "git.confirmSync": false,
-  //"javascript.implicitProjectConfig.experimentalDecorators": true,
   "editor.renderWhitespace": "boundary",
   "editor.cursorBlinking": "smooth",
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": true,
-  //"editor.fontFamily": "'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
   "editor.codeLens": true,
   "editor.snippetSuggestions": "top",
   "editor.fontWeight": "500",
-  "editor.fontSize": 14,
-  "editor.rulers": [ //代码长度
+  "editor.fontSize": 16,
+  "editor.rulers": [
     120
   ],
-  "python.linting.pylintArgs": [
-    "----extension-pkg-whitelist=1xml"
-  ],
+  // Python 相关配置
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": false,
   "python.formatting.provider": "yapf",
+  "python.formatting.yapfArgs": [
+    "--style={based_on_style: pep8, indent_width: 4}"
+  ],
+  "python.terminal.activateEnvironment": true,
+  "python.terminal.executeInFileDir": true,
   "code-runner.executorMap": {
-    "python": "set PYTHONIOENCODING = utf8 && python -u",
+    "python": "set PYTHONIOENCODING=utf8 && python -u"
   },
   "explorer.confirmDragAndDrop": false,
-  "workbench.colorTheme": "GitHub Light Default", //主题
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Default Light+",
+  // "workbench.iconTheme": "vscode-icons",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "vsicons.dontShowNewVersionMessage": true,
-  "editor.renderIndentGuides": false //图标
+  "editor.guides.indentation": false
 }
