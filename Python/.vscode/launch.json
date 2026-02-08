@@ -2,18 +2,40 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: 当前文件",
+      "name": "Python: Current File",
       "type": "python",
       "request": "launch",
       "program": "${file}",
-      "console": "integratedTerminal"
+      "console": "integratedTerminal",
+      "cwd": "/mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI",
+      "pythonPath": "/root/miniconda/bin/python"
     },
     {
-      "name": "Python: 选择文件",
+      "name": "Python: centigrade.py",
       "type": "python",
       "request": "launch",
-      "program": "${filePicker}",
-      "console": "integratedTerminal"
+      "program": "/mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI/centigrade.py",
+      "console": "integratedTerminal",
+      "cwd": "/mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI",
+      "pythonPath": "/root/miniconda/bin/python"
+    },
+    {
+      "name": "Python: circle.py",
+      "type": "python",
+      "request": "launch",
+      "program": "/mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI/circle.py",
+      "console": "integratedTerminal",
+      "cwd": "/mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI",
+      "pythonPath": "/root/miniconda/bin/python"
+    },
+    {
+      "name": "Python: triangel.py",
+      "type": "python",
+      "request": "launch",
+      "program": "/mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI/triangel.py",
+      "console": "integratedTerminal",
+      "cwd": "/mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI",
+      "pythonPath": "/root/miniconda/bin/python"
     }
   ]
 }

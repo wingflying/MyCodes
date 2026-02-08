@@ -1,0 +1,56 @@
+{
+  "folders": [
+    {
+      "name": "Python Basic Exercises",
+      "path": "/mnt/e/GitCodes/MyCodes/Python/basicEx"
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "/root/miniconda/bin/python",
+    "terminal.integrated.cwd": "/mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI",
+    "python.terminal.executeInFileDir": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run centigrade.py",
+        "type": "shell",
+        "command": "cd /mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI && /root/miniconda/bin/python centigrade.py",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        }
+      },
+      {
+        "label": "Run circle.py",
+        "type": "shell",
+        "command": "cd /mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI && /root/miniconda/bin/python circle.py",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        }
+      },
+      {
+        "label": "Run triangel.py",
+        "type": "shell",
+        "command": "cd /mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI && /root/miniconda/bin/python triangel.py",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        }
+      }
+    ]
+  }
+}
