@@ -1,0 +1,6 @@
+Django
+django_heroku
+matplotlib
+plotly
+pygame
+requests

@@ -4,7 +4,16 @@
 #from math import sqrt
 import math
 
-num = int(input('请输入一个正整数：'))
+while True:
+    try:
+        num = int(input('请输入一个正整数：'))
+        if num <= 0:
+            print("请输入一个正整数！")
+            continue
+        break
+    except ValueError:
+        print("输入错误！请输入有效的整数。")
+
 count = 0
 
 for i in range(2, num):

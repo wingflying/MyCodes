@@ -1,13 +1,12 @@
 {
   "folders": [
     {
-      "name": "Python Basic Exercises",
-      "path": "/mnt/e/GitCodes/MyCodes/Python/basicEx"
+      "path": "."
     }
   ],
   "settings": {
     "python.defaultInterpreterPath": "/root/miniconda/bin/python",
-    "terminal.integrated.cwd": "/mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI",
+    "terminal.integrated.cwd": ".",
     "python.terminal.executeInFileDir": true,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000
@@ -16,41 +15,31 @@
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "Run centigrade.py",
+        "label": "requirements",
         "type": "shell",
-        "command": "cd /mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI && /root/miniconda/bin/python centigrade.py",
-        "group": "build",
+        "command": "pipreqs",
+        "args": [
+          ".",
+          "--savepath",
+          "requirements.txt",
+          "--encoding=utf-8",
+          "--force",
+          "--mode",
+          "no-pin"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}/"
+        },
         "presentation": {
-          "echo": true,
-          "reveal": "always",
-          "focus": false,
-          "panel": "shared"
+          "reveal": "never",
+          "panel": "dedicated",
+          "showReuseMessage": false,
+          "clear": false
+        },
+        "runOptions": {
+          "runOn": "folderOpen"
         }
       },
-      {
-        "label": "Run circle.py",
-        "type": "shell",
-        "command": "cd /mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI && /root/miniconda/bin/python circle.py",
-        "group": "build",
-        "presentation": {
-          "echo": true,
-          "reveal": "always",
-          "focus": false,
-          "panel": "shared"
-        }
-      },
-      {
-        "label": "Run triangel.py",
-        "type": "shell",
-        "command": "cd /mnt/e/GitCodes/MyCodes/Python/basicEx/BlockI && /root/miniconda/bin/python triangel.py",
-        "group": "build",
-        "presentation": {
-          "echo": true,
-          "reveal": "always",
-          "focus": false,
-          "panel": "shared"
-        }
-      }
     ]
   }
 }

@@ -4,7 +4,16 @@
 
 from math import sqrt
 
-num = int(input('请输入一个正整数：'))
+while True:
+    try:
+        num = int(input('请输入一个正整数：'))
+        if num <= 0:
+            print("请输入一个正整数！")
+            # continue75
+        break
+    except ValueError:
+        print("输入错误！请输入有效的整数。")
+
 end = int(sqrt(num))
 
 is_prime = True
