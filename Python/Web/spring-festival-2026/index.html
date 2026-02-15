@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026丙午马年 - 新春祝福</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'SimHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #8B0000 0%, #DC143C 30%, #C41E3A 70%, #8B0000 100%);
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Canvas背景 */
+        #fireworks-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        /* 祥云装饰 */
+        .cloud {
+            position: fixed;
+            font-size: 100px;
+            opacity: 0.15;
+            z-index: 0;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            25% {
+                transform: translateY(-20px) translateX(10px);
+            }
+            50% {
+                transform: translateY(-10px) translateX(-10px);
+            }
+            75% {
+                transform: translateY(-30px) translateX(5px);
+            }
+        }
+
+        /* 主容器 */
+        .container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* 顶部标题 */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .art-title {
+            font-size: 5rem;
+            background: linear-gradient(180deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+            filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.3));
+            font-weight: bold;
+            letter-spacing: 10px;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% {
+                filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.3)) brightness(1);
+            }
+            50% {
+                filter: drop-shadow(3px 3px 10px rgba(255, 215, 0, 0.5)) brightness(1.2);
+            }
+        }
+
+        .zodiac-subtitle {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-top: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+        }
+
+        /* 红色信封容器 */
+        .envelope-container {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .envelope-container:hover {
+            transform: scale(1.05);
+        }
+
+        /* 信封 */
+        .envelope {
+            position: relative;
+            width: 350px;
+            height: 240px;
+            background: linear-gradient(135deg, #DC143C 0%, #C41E3A 50%, #8B0000 100%);
+            border-radius: 10px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), inset 0 2px 10px rgba(255, 215, 0, 0.3);
+            animation: envelopeFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes envelopeFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* 信封盖 */
+        .envelope-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 175px solid transparent;
+            border-right: 175px solid transparent;
+            border-top: 120px solid #B22222;
+            transform-origin: top;
+            transition: transform 0.6s ease-out;
+            z-index: 2;
+        }
+
+        .envelope-flap.open {
+            transform: rotateX(180deg);
+        }
+
+        /* 信封金色边框 */
+        .envelope-border {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 3px solid #FFD700;
+            border-radius: 7px;
+            pointer-events: none;
+        }
+
+        /* 信封上的"福"字 */
+        .envelope-fu {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5rem;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+            z-index: 1;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        .envelope-flap.open ~ .envelope-fu {
+            opacity: 0;
+        }
+
+        /* 祝福语卡片（从信封中弹出） */
+        .greeting-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: linear-gradient(135deg, #FFFAF0 0%, #FFF8DC 50%, #FFFACD 100%);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            min-width: 320px;
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 10;
+            border: 3px solid #FFD700;
+        }
+
+        .greeting-card.show {
+            transform: translate(-50%, -50%) scale(1) translateY(-50px);
+            opacity: 1;
+        }
+
+        .greeting-main {
+            font-size: 2.2rem;
+            color: #DC143C;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .greeting-sub {
+            font-size: 1.5rem;
+            color: #8B0000;
+            line-height: 1.8;
+        }
+
+        .horse-deco {
+            font-size: 3rem;
+            margin-top: 15px;
+            display: inline-block;
+            animation: gallop 1s infinite;
+        }
+
+        @keyframes gallop {
+            0%, 100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+            50% {
+                transform: translateY(-8px) rotate(5deg);
+            }
+        }
+
+        /* 提示文字 */
+        .hint {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #FFD700;
+            text-align: center;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* 底部署名 */
+        .signature {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 1;
+            background: rgba(139, 0, 0, 0.8);
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: 2px solid #FFD700;
+        }
+
+        .signature-text {
+            color: #FFD700;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .signature-sub {
+            color: #FFF;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        /* 金币/花瓣飘落容器 */
+        .falling-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 100;
+        }
+
+        .falling-item {
+            position: absolute;
+            font-size: 40px;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg) scale(0);
+                opacity: 1;
+            }
+            10% {
+                transform: translateY(0) rotate(36deg) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .art-title {
+                font-size: 3rem;
+                letter-spacing: 5px;
+            }
+
+            .zodiac-subtitle {
+                font-size: 1.8rem;
+            }
+
+            .envelope {
+                width: 280px;
+                height: 190px;
+            }
+
+            .envelope-flap {
+                border-left: 140px solid transparent;
+                border-right: 140px solid transparent;
+                border-top: 95px solid #B22222;
+            }
+
+            .envelope-fu {
+                font-size: 4rem;
+            }
+
+            .greeting-card {
+                min-width: 260px;
+                padding: 30px 20px;
+            }
+
+            .greeting-main {
+                font-size: 1.8rem;
+            }
+
+            .greeting-sub {
+                font-size: 1.2rem;
+            }
+
+            .hint {
+                font-size: 1rem;
+            }
+
+            .signature {
+                padding: 10px 20px;
+                bottom: 20px;
+            }
+
+            .signature-text {
+                font-size: 1.1rem;
+            }
+
+            .signature-sub {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 烟花Canvas背景 -->
+    <canvas id="fireworks-canvas"></canvas>
+
+    <!-- 祥云装饰 -->
+    <div class="cloud" style="top: 10%; left: 5%;">☁️</div>
+    <div class="cloud" style="top: 20%; right: 8%;">☁️</div>
+    <div class="cloud" style="top: 60%; left: 10%;">☁️</div>
+    <div class="cloud" style="top: 70%; right: 12%;">☁️</div>
+
+    <!-- 金币/花瓣飘落容器 -->
+    <div class="falling-container" id="falling-container"></div>
+
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 顶部标题 -->
+        <header class="header">
+            <h1 class="art-title">2026</h1>
+            <p class="zodiac-subtitle">🐎 丙午马年 🐎</p>
+        </header>
+
+        <!-- 红色信封 -->
+        <div class="envelope-container" id="envelope" onclick="openEnvelope()">
+            <div class="envelope">
+                <div class="envelope-border"></div>
+                <div class="envelope-flap" id="envelope-flap"></div>
+                <div class="envelope-fu">福</div>
+            </div>
+            <div class="greeting-card" id="greeting-card">
+                <div class="greeting-main">新春快乐</div>
+                <div class="greeting-sub">万事如意 · 阖家幸福<br>马年行大运 · 财源滚滚来</div>
+                <div class="horse-deco">🐎</div>
+            </div>
+        </div>
+
+        <!-- 提示文字 -->
+        <div class="hint" id="hint">✨ 点击信封领取祝福 ✨</div>
+
+        <!-- 底部署名 -->
+        <div class="signature">
+            <div class="signature-text">🎉 2026新春祝福 🎉</div>
+            <div class="signature-sub">致: 远方的朋友</div>
+        </div>
+    </div>
+
+    <!-- 喜庆音乐（使用Web Audio API生成） -->
+    <script>
+        // 烟花效果
+        const canvas = document.getElementById('fireworks-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        class Firework {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = canvas.height;
+                this.targetY = Math.random() * (canvas.height * 0.4) + 50;
+                this.speed = Math.random() * 3 + 4;
+                this.radius = Math.random() * 2 + 1;
+                this.hue = Math.random() * 60 + 30; // 金色到橙色
+                this.trail = [];
+                this.exploded = false;
+            }
+
+            update() {
+                if (!this.exploded) {
+                    this.trail.push({ x: this.x, y: this.y });
+                    if (this.trail.length > 10) {
+                        this.trail.shift();
+                    }
+
+                    this.y -= this.speed;
+
+                    if (this.y <= this.targetY) {
+                        this.exploded = true;
+                        return true; // 返回true表示爆炸
+                    }
+                }
+                return false;
+            }
+
+            draw() {
+                if (!this.exploded) {
+                    // 绘制尾迹
+                    for (let i = 0; i < this.trail.length; i++) {
+                        const alpha = i / this.trail.length;
+                        ctx.beginPath();
+                        ctx.arc(this.trail[i].x, this.trail[i].y, this.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = `hsla(${this.hue}, 100%, 50%, ${alpha})`;
+                        ctx.fill();
+                    }
+
+                    // 绘制烟花
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `hsl(${this.hue}, 100%, 60%)`;
+                    ctx.fill();
+                }
+            }
+        }
+
+        class Particle {
+            constructor(x, y, hue) {
+                this.x = x;
+                this.y = y;
+                this.hue = hue;
+                this.size = Math.random() * 3 + 1;
+                this.speedX = (Math.random() - 0.5) * 8;
+                this.speedY = (Math.random() - 0.5) * 8;
+                this.gravity = 0.1;
+                this.life = 1;
+                this.decay = Math.random() * 0.02 + 0.01;
+            }
+
+            update() {
+                this.speedX *= 0.98;
+                this.speedY += this.gravity;
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.life -= this.decay;
+                return this.life > 0;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `hsla(${this.hue}, 100%, 60%, ${this.life})`;
+                ctx.fill();
+            }
+        }
+
+        let fireworks = [];
+        let particles = [];
+
+        function createExplosion(x, y, hue) {
+            for (let i = 0; i < 50; i++) {
+                particles.push(new Particle(x, y, hue));
+            }
+        }
+
+        function animateFireworks() {
+            ctx.fillStyle = 'rgba(139, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 随机发射烟花
+            if (Math.random() < 0.02) {
+                fireworks.push(new Firework());
+            }
+
+            // 更新和绘制烟花
+            fireworks = fireworks.filter(firework => {
+                const exploded = firework.update();
+                firework.draw();
+                return !exploded;
+            });
+
+            // 更新和绘制粒子
+            particles = particles.filter(particle => {
+                const alive = particle.update();
+                particle.draw();
+                return alive;
+            });
+
+            requestAnimationFrame(animateFireworks);
+        }
+
+        animateFireworks();
+
+        // 信封交互
+        let isOpened = false;
+        const envelope = document.getElementById('envelope');
+        const envelopeFlap = document.getElementById('envelope-flap');
+        const greetingCard = document.getElementById('greeting-card');
+        const hint = document.getElementById('hint');
+        const fallingContainer = document.getElementById('falling-container');
+
+        // 音频上下文
+        let audioContext;
+
+        // 使用Web Audio API生成"恭喜发财"旋律
+        function playFestiveMusic() {
+            if (audioContext) {
+                audioContext.resume();
+                return;
+            }
+
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+            // 恭喜发财的音符频率
+            const notes = [
+                { freq: 523.25, duration: 0.3 }, // C5
+                { freq: 659.25, duration: 0.3 }, // E5
+                { freq: 783.99, duration: 0.3 }, // G5
+                { freq: 659.25, duration: 0.3 }, // E5
+                { freq: 523.25, duration: 0.6 }, // C5
+                { freq: 587.33, duration: 0.3 }, // D5
+                { freq: 659.25, duration: 0.6 }, // E5
+                { freq: 523.25, duration: 0.6 }, // C5
+                { freq: 440.00, duration: 0.6 }, // A4
+            ];
+
+            let currentTime = audioContext.currentTime;
+
+            notes.forEach((note, index) => {
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+
+                oscillator.type = 'triangle';
+                oscillator.frequency.setValueAtTime(note.freq, currentTime);
+
+                gainNode.gain.setValueAtTime(0.3, currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, currentTime + note.duration);
+
+                oscillator.start(currentTime);
+                oscillator.stop(currentTime + note.duration);
+
+                currentTime += note.duration;
+            });
+
+            // 添加一些打击乐效果（模拟锣鼓）
+            setTimeout(() => {
+                if (!audioContext) return;
+                for (let i = 0; i < 3; i++) {
+                    setTimeout(() => {
+                        const osc = audioContext.createOscillator();
+                        const gain = audioContext.createGain();
+                        osc.connect(gain);
+                        gain.connect(audioContext.destination);
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(150 + Math.random() * 100, audioContext.currentTime);
+                        gain.gain.setValueAtTime(0.2, audioContext.currentTime);
+                        gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+                        osc.start();
+                        osc.stop(audioContext.currentTime + 0.1);
+                    }, i * 200);
+                }
+            }, 1000);
+        }
+
+        // 金币和花瓣飘落效果
+        function createFallingItems() {
+            const items = ['💰', '🪙', '✨', '🌸', '🎊', '⭐', '💫', '🏆'];
+            const count = 50;
+
+            for (let i = 0; i < count; i++) {
+                setTimeout(() => {
+                    const item = document.createElement('div');
+                    item.className = 'falling-item';
+                    item.textContent = items[Math.floor(Math.random() * items.length)];
+                    item.style.left = Math.random() * 100 + '%';
+                    item.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                    item.style.fontSize = (Math.random() * 30 + 20) + 'px';
+                    fallingContainer.appendChild(item);
+
+                    setTimeout(() => {
+                        item.remove();
+                    }, 6000);
+                }, i * 50);
+            }
+        }
+
+        // 额外的烟花爆炸
+        function createBigExplosion() {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    const x = Math.random() * canvas.width;
+                    const y = Math.random() * (canvas.height * 0.4) + 50;
+                    const hue = Math.random() * 60 + 30;
+                    createExplosion(x, y, hue);
+                }, i * 200);
+            }
+        }
+
+        // 打开信封
+        function openEnvelope() {
+            if (isOpened) return;
+            isOpened = true;
+
+            // 打开信封盖
+            envelopeFlap.classList.add('open');
+
+            // 显示祝福卡片
+            greetingCard.classList.add('show');
+
+            // 隐藏提示
+            hint.style.display = 'none';
+
+            // 播放音乐
+            playFestiveMusic();
+
+            // 飘落金币和花瓣
+            createFallingItems();
+
+            // 额外烟花
+            createBigExplosion();
+
+            // 持续飘落效果
+            setInterval(() => {
+                if (isOpened) {
+                    const item = document.createElement('div');
+                    item.className = 'falling-item';
+                    item.textContent = ['💰', '🪙', '✨', '🌸'][Math.floor(Math.random() * 4)];
+                    item.style.left = Math.random() * 100 + '%';
+                    item.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                    item.style.fontSize = (Math.random() * 30 + 20) + 'px';
+                    fallingContainer.appendChild(item);
+
+                    setTimeout(() => {
+                        item.remove();
+                    }, 6000);
+                }
+            }, 300);
+        }
+    </script>
+</body>
+</html>
